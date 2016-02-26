@@ -309,6 +309,7 @@
 				CC96CC901C7A9B8200C6B0CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

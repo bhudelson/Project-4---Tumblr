@@ -17,6 +17,12 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var trendingButton: UIButton!
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet var buttons: [UIButton]!
+    
+    var HomeViewController: UIViewController!
+    var SearchViewController: UIViewController!
+    var AccountViewController: UIViewController!
+    var TrendingViewController: UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
