@@ -25,10 +25,6 @@ class ComposeViewController: UIViewController {
    
     
     
-    
-    
-    
-    
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,19 +36,16 @@ class ComposeViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
-        // Set compose icons to start below screen
-        
+        // Set compose buttons to start below screen
         for var i = 0; i < composeButtons.count; i++ {
             
-            print("Size of Compose Array: ", composeButtons.count)
-            print("Moving down compose #", i, " by 500 px from original y point of ", composeButtons[i].frame.origin.y)
+        
+        //Store original location in array
+        composeButtonOrigins.append(composeButtons[i].frame.origin)
             
-            //Store original location in array
-            composeButtonOrigins.append(composeButtons[i].frame.origin)
             
-            //Move the buttons down
-            
-            composeButtons[i].frame.origin.y = composeButtons[i].frame.origin.y + 500
+        //Move compose buttons down
+        composeButtons[i].frame.origin.y = composeButtons[i].frame.origin.y + 500
             
         }
         
