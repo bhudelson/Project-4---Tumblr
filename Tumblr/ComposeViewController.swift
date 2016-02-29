@@ -10,64 +10,151 @@ import UIKit
 
 class ComposeViewController: UIViewController {
     
-    @IBOutlet var composeButtons: [UIImageView]!
+    //OUTLETS
+    @IBOutlet weak var textButton: UIImageView!
+    @IBOutlet weak var photoButton: UIImageView!
+    @IBOutlet weak var quoteButton: UIImageView!
+    @IBOutlet weak var linkButton: UIImageView!
+    @IBOutlet weak var chatButton: UIImageView!
+    @IBOutlet weak var videoButton: UIImageView!
+    @IBOutlet weak var nevermindButton: UIButton!
     
-    var composeButtonOrigins = [CGPoint]()
-
-
-    @IBOutlet var composeBackground: UIView!
+  
+    //VARIABLES
+    var photoStartPosition: CGFloat!
+    var photoOffset: CGFloat!
    
-    @IBAction func dismissComposeViewController(sender: AnyObject) {
-        
-        dismissViewControllerAnimated(false, completion: nil)
-        print("dismiss Compose Modal")
-    }
-   
-    
     
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        photoStartPosition = photoButton.frame.origin.y
+        photoOffset = 600
         
-
-        // Do any additional setup after loading the view.
     }
     
+    
+    //VIEW WILL APPEAR
     override func viewWillAppear(animated: Bool) {
         
         // Set compose buttons to start below screen
-        for var i = 0; i < composeButtons.count; i++ {
-            
         
-        //Store original location in array
-        composeButtonOrigins.append(composeButtons[i].frame.origin)
-            
-            
-        //Move compose buttons down
-        composeButtons[i].frame.origin.y = composeButtons[i].frame.origin.y + 500
-            
-        }
+        self.photoButton.center.y = 600
+        self.quoteButton.center.y = 600
+        self.textButton.center.y = 600
+        self.chatButton.center.y = 600
+        self.linkButton.center.y = 600
+        self.videoButton.center.y = 600
+        
+        
         
     }
     
+    
+    //VIEW DID APPEAR
     override func viewDidAppear(animated: Bool) {
-        super.viewDidLoad()
         
-        for var i = 0; i < composeButtons.count; i++ {
-            
-            UIView.animateWithDuration(1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: { () -> Void in
-                
-                self.composeButtons[i].frame.origin = self.composeButtonOrigins[i]
-                
-                }, completion: nil)
-            
-            
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            self.textButton.center.y = 157
+            }) { (Bool) -> Void in
+        }
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.photoButton.center.y = 157
+            }) { (Bool) -> Void in
+        }
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.quoteButton.center.y = 157
+            }) { (Bool) -> Void in
+        }
+        
+        UIView.animateWithDuration(0.6, animations: { () -> Void in
+            self.chatButton.center.y = 288
+            }) { (Bool) -> Void in
+        }
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.linkButton.center.y = 288
+            }) { (Bool) -> Void in
+        }
+        
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
+            self.videoButton.center.y = 288
+            }) { (Bool) -> Void in
         }
         
     
     }
 
+    
+    @IBAction func dismissCompose(sender: AnyObject) {
+        
+        self.textButton.center.y = 157
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            self.textButton.center.y = -300
+            }) { (Bool) -> Void in
+        }
+        
+        self.photoButton.center.y = 157
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.photoButton.center.y = -300
+            }) { (Bool) -> Void in
+        }
+        
+        self.quoteButton.center.y = 157
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.quoteButton.center.y = -300
+            }) { (Bool) -> Void in
+        }
+        
+        
+        self.chatButton.center.y = 288
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.chatButton.center.y = -300
+            }) { (Bool) -> Void in
+        }
+        
+        self.linkButton.center.y = 288
+        UIView.animateWithDuration(0.6, animations: { () -> Void in
+            self.linkButton.center.y = -300
+            }) { (Bool) -> Void in
+        }
+        
+        self.videoButton.center.y = 288
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
+            self.videoButton.center.y = -300
+            }) { (Bool) -> Void in
+        }
+        
+        let seconds = 0.8
+        let delay = seconds * Double(NSEC_PER_SEC)
+        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        
+        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            
+            self.photoButton.center.y = -1000
+            self.quoteButton.center.y = -1000
+            self.textButton.center.y = -1000
+            self.chatButton.center.y = -1000
+            self.linkButton.center.y = -1000
+            self.videoButton.center.y = -1000
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        })
+        
+            
+    
+        
+        
+    }
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

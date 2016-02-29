@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC1E5C5A1C83FFDA00B26CB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E5C591C83FFDA00B26CB9 /* LoginViewController.swift */; };
 		CC96CC801C7A9B8200C6B0CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96CC7F1C7A9B8200C6B0CC /* AppDelegate.swift */; };
 		CC96CC821C7A9B8200C6B0CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96CC811C7A9B8200C6B0CC /* ViewController.swift */; };
 		CC96CC851C7A9B8200C6B0CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC96CC831C7A9B8200C6B0CC /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC1E5C591C83FFDA00B26CB9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC96CC7C1C7A9B8200C6B0CC /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC96CC7F1C7A9B8200C6B0CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC96CC811C7A9B8200C6B0CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CC96CC7F1C7A9B8200C6B0CC /* AppDelegate.swift */,
 				CC96CC811C7A9B8200C6B0CC /* ViewController.swift */,
 				CC96CC831C7A9B8200C6B0CC /* Main.storyboard */,
+				CC1E5C591C83FFDA00B26CB9 /* LoginViewController.swift */,
 				CC96CCB91C7AE06100C6B0CC /* TrendingViewController.swift */,
 				CC96CCB71C7AE01700C6B0CC /* AccountViewController.swift */,
 				CC96CCB51C7ADD2F00C6B0CC /* ComposeViewController.swift */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1E5C5A1C83FFDA00B26CB9 /* LoginViewController.swift in Sources */,
 				CC96CCB41C7ADCE600C6B0CC /* SearchViewController.swift in Sources */,
 				CC96CCBA1C7AE06100C6B0CC /* TrendingViewController.swift in Sources */,
 				CC96CC821C7A9B8200C6B0CC /* ViewController.swift in Sources */,
