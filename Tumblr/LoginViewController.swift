@@ -9,21 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func keyboardWillShow(notification: NSNotification!) {
-            
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
-        func keyboardWillHide(notification: NSNotification!) {
-            
-        }
+        
 
         // Do any additional setup after loading the view.
     }
@@ -31,6 +24,18 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func keyboardWillShow(notification: NSNotification!) {
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+    }
+    
+    
+    @IBAction func didTapCancel(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 

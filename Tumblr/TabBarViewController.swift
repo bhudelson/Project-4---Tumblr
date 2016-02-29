@@ -17,6 +17,7 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var AccountButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var exploreView: UIImageView!
     
     @IBOutlet var buttons: [UIButton]!
     
@@ -32,7 +33,7 @@ class TabBarViewController: UIViewController {
     
     var selectedIndex: Int = 0
     
-    
+    var fadeTransition: FadeTransition!
     
     //VIEW DID LOAD
     override func viewDidLoad() {
@@ -80,6 +81,16 @@ class TabBarViewController: UIViewController {
         
         didMoveToParentViewController(self)
         
+        self.exploreView.alpha = 1
+        if SearchViewController == vc {
+            UIView.animateWithDuration(0.4, animations: {
+                // This causes first view to fade in and second view to fade out
+                self.exploreView.alpha = 0
+            })
+        } else {
+            self.exploreView.alpha = 1
+        }
+        
     }
     
 
@@ -89,14 +100,25 @@ class TabBarViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+//        var ComposeViewController = segue.ComposeViewController
+//        
+//        // Set the modal presentation style of your destinationViewController to be custom.
+//        ComposeViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+//        
+//        // Create a new instance of your fadeTransition.
+//        fadeTransition = FadeTransition()
+//        
+//        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+//        ComposeViewController.transitioningDelegate = fadeTransition
+//        
+//        // Adjust the transition duration. (seconds)
+//        fadeTransition.duration = 1.0
+//    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

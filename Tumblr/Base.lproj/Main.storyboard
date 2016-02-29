@@ -142,43 +142,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="kkn-hy-4sv">
-                                        <rect key="frame" x="10" y="218" width="300" height="132"/>
+                                        <rect key="frame" x="10" y="125" width="300" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Oc-x0-dV9">
-                                        <rect key="frame" x="10" y="307" width="150" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d6D-48-GpP">
-                                        <rect key="frame" x="162" y="307" width="150" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="lp0-1a-7kD">
-                                        <rect key="frame" x="19" y="226" width="291" height="30"/>
+                                        <rect key="frame" x="19" y="133" width="291" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="ijs-RO-9zK">
-                                        <rect key="frame" x="15" y="269" width="291" height="30"/>
+                                        <rect key="frame" x="15" y="176" width="291" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Oc-x0-dV9" userLabel="Cancel">
+                                        <rect key="frame" x="10" y="214" width="150" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nse-gb-VJn" appends="YES" id="irR-Oh-a96"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.16862745098039217" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="cancelButton" destination="0Oc-x0-dV9" id="WjS-ac-7Zw"/>
-                        <outlet property="loginButton" destination="d6D-48-GpP" id="cZN-vr-LZh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7W-Eg-ifG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nse-gb-VJn">
+                    <connections>
+                        <action selector="didTapCancel:" destination="TwU-FK-wgn" id="amd-8I-ZP7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1210" y="1115"/>
         </scene>
@@ -257,7 +258,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
                                         <connections>
-                                            <segue destination="uB0-z5-XC3" kind="modal" id="h0G-LA-02Z"/>
+                                            <segue destination="uB0-z5-XC3" kind="modal" modalTransitionStyle="crossDissolve" id="h0G-LA-02Z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A9f-Mc-NKK">
@@ -292,6 +293,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="riv-I9-T5e">
+                                <rect key="frame" x="9" y="455" width="177" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -299,6 +304,7 @@
                         <outlet property="AccountButton" destination="A9f-Mc-NKK" id="4Xr-GJ-tlJ"/>
                         <outlet property="composeButton" destination="l0o-OZ-J40" id="oUf-xk-15g"/>
                         <outlet property="contentView" destination="Lta-cV-ogC" id="heJ-7I-L7S"/>
+                        <outlet property="exploreView" destination="riv-I9-T5e" id="Du3-eS-sbo"/>
                         <outlet property="homeButton" destination="s0R-hG-GsG" id="abK-XA-iZD"/>
                         <outlet property="searchButton" destination="gGL-wi-HmI" id="vD9-3b-xTh"/>
                         <outlet property="trendingButton" destination="fQ6-Cj-8GS" id="Sm5-9o-DLJ"/>
@@ -318,6 +324,7 @@
         <image name="account_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>

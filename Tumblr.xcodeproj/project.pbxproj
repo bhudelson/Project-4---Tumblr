@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC1E5C5A1C83FFDA00B26CB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E5C591C83FFDA00B26CB9 /* LoginViewController.swift */; };
+		CC1E5C5D1C840A4C00B26CB9 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E5C5B1C840A4C00B26CB9 /* FadeTransition.swift */; };
+		CC1E5C5E1C840A4C00B26CB9 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E5C5C1C840A4C00B26CB9 /* BaseTransition.swift */; };
 		CC96CC801C7A9B8200C6B0CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96CC7F1C7A9B8200C6B0CC /* AppDelegate.swift */; };
 		CC96CC821C7A9B8200C6B0CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC96CC811C7A9B8200C6B0CC /* ViewController.swift */; };
 		CC96CC851C7A9B8200C6B0CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC96CC831C7A9B8200C6B0CC /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		CC1E5C591C83FFDA00B26CB9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC1E5C5B1C840A4C00B26CB9 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		CC1E5C5C1C840A4C00B26CB9 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		CC96CC7C1C7A9B8200C6B0CC /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC96CC7F1C7A9B8200C6B0CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC96CC811C7A9B8200C6B0CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				CC96CC7F1C7A9B8200C6B0CC /* AppDelegate.swift */,
 				CC96CC811C7A9B8200C6B0CC /* ViewController.swift */,
 				CC96CC831C7A9B8200C6B0CC /* Main.storyboard */,
+				CC1E5C5B1C840A4C00B26CB9 /* FadeTransition.swift */,
+				CC1E5C5C1C840A4C00B26CB9 /* BaseTransition.swift */,
 				CC1E5C591C83FFDA00B26CB9 /* LoginViewController.swift */,
 				CC96CCB91C7AE06100C6B0CC /* TrendingViewController.swift */,
 				CC96CCB71C7AE01700C6B0CC /* AccountViewController.swift */,
@@ -163,7 +169,9 @@
 				CC96CC821C7A9B8200C6B0CC /* ViewController.swift in Sources */,
 				CC96CCB81C7AE01700C6B0CC /* AccountViewController.swift in Sources */,
 				CC96CCB01C7AD76100C6B0CC /* TabBarViewController.swift in Sources */,
+				CC1E5C5D1C840A4C00B26CB9 /* FadeTransition.swift in Sources */,
 				CC96CCB61C7ADD2F00C6B0CC /* ComposeViewController.swift in Sources */,
+				CC1E5C5E1C840A4C00B26CB9 /* BaseTransition.swift in Sources */,
 				CC96CC801C7A9B8200C6B0CC /* AppDelegate.swift in Sources */,
 				CC96CCB21C7ADCBD00C6B0CC /* HomeViewController.swift in Sources */,
 			);
